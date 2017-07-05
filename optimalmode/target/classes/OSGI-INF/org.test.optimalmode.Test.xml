@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.test.optimalmode.Test" activate="activate">
+    <implementation class="org.test.optimalmode.Test"/>
+    <property name="service.pid" value="org.test.optimalmode.Test"/>
+    <reference name="dhcpService" interface="org.onosproject.dhcp.DhcpService" cardinality="1..1" policy="static" bind="bindDhcpService" unbind="unbindDhcpService"/>
+    <reference name="ueRuleService" interface="org.test.optimalmode.UeRuleService" cardinality="1..1" policy="static" bind="bindUeRuleService" unbind="unbindUeRuleService"/>
+    <reference name="service" interface="org.onosproject.event.EventDeliveryService" cardinality="1..1" policy="static" bind="bindService" unbind="unbindService"/>
+</scr:component>

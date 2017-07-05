@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.test.optimalmode.AssociationEventMonitor" activate="activate" deactivate="deactivate">
+    <implementation class="org.test.optimalmode.AssociationEventMonitor"/>
+    <property name="service.pid" value="org.test.optimalmode.AssociationEventMonitor"/>
+    <reference name="flowTableService" interface="org.onosproject.net.table.FlowTableService" cardinality="1..1" policy="static" bind="bindFlowTableService" unbind="unbindFlowTableService"/>
+    <reference name="flowTableStore" interface="org.onosproject.net.table.FlowTableStore" cardinality="1..1" policy="static" bind="bindFlowTableStore" unbind="unbindFlowTableStore"/>
+    <reference name="flowRuleService" interface="org.onosproject.net.flow.FlowRuleService" cardinality="1..1" policy="static" bind="bindFlowRuleService" unbind="unbindFlowRuleService"/>
+    <reference name="ueRule" interface="org.test.optimalmode.UeRuleService" cardinality="1..1" policy="static" bind="bindUeRule" unbind="unbindUeRule"/>
+    <reference name="dhcpService" interface="org.onosproject.dhcp.DhcpService" cardinality="1..1" policy="static" bind="bindDhcpService" unbind="unbindDhcpService"/>
+</scr:component>

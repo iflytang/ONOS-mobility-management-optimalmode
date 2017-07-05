@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" enabled="true" immediate="true" name="org.test.dhcp.DhcpUi" activate="activate" deactivate="deactivate">
+    <implementation class="org.test.dhcp.DhcpUi"/>
+    <service servicefactory="false">
+        <provide interface="org.test.dhcp.DhcpUi"/>
+    </service>
+    <property name="service.pid" value="org.test.dhcp.DhcpUi"/>
+    <reference name="uiExtensionService" interface="org.onosproject.ui.UiExtensionService" cardinality="1..1" policy="static" bind="bindUiExtensionService" unbind="unbindUiExtensionService"/>
+</scr:component>
